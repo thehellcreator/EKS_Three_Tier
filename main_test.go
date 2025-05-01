@@ -17,7 +17,7 @@ func TestMain(t *testing.T) {
 	rr := httptest.NewRecorder()
 	handler := http.HandlerFunc(homePage)
 
-	handler.ServeHTTP(rr, req)
+	handler.ServeHTTP(rr, req) 
 
 	if status := rr.Code; status != http.StatusOK {
 		t.Errorf("handler returned wrong status code: got %v want %v",
